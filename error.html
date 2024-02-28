@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>.::Innovacion Tecnologica (INTEC)::.</title>
+  <!-- Required meta tags -->
+  <link rel="icon" href="https://gconfisur.com/src/img/logo4.png" type="image/x-icon" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://gconfisur.com/src/css/styleintec.css">
+</head>
+
+<body>
+  <div class="container-fluid info">
+    <div class="row">
+      <div class="col">
+        <div class="card text-center text-white" style="--bs-card-bg: #ffffff2e">
+            <div class="card-header">
+                <h1><strong>Pagina en Construccion</strong></h1>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Estamos trabajando para ustedes</h4>
+                <h2 class="card-text">Regrasaremos con muchas cosas nuevas</h2>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="contenedor"> 
+                    <div class="contenido">
+                      <div class="contador">
+                        <div class="responsivo1">
+                          <div class="cartel">
+                          <div id="dias"></div>
+                          <div class="h3"><h3>Días</h3></div>
+                        </div>
+                          <div class="cartel">
+                          <div id="horas"></div>
+                          <div class="h3"><h3>Horas</h3></div>
+                        </div>
+                        </div>
+                        <div class="responsivo2">
+                        <div class="cartel">
+                          <div id="minutos"></div>
+                          <div class="h3"><h3>Minutos</h3></div>
+                        </div>
+                        <div class="cartel">
+                          <div id="segundos"></div>
+                          <div class="h3"><h3>Segundos</h3></div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="bottom-footer" class="section">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <span class="copyright text-white">
+                        <p>Diseñado por <a style="color:white" href="http://www.intecca.com.ve/" target="_blank"><strong>INTEC C.A</strong> </a> &copy; <script>
+                                document.write(new Date().getFullYear());
+                            </script> | Todos los derechos reservados</p>
+                    </span>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+    let countDown = new Date('Sep 15, 2023 00:00:00').getTime(),
+    x = setInterval(function() {
+        let now = new Date().getTime(),
+        distance = countDown - now;
+
+        document.getElementById('dias').innerText = Math.floor(distance / (day)),
+        document.getElementById('horas').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutos').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('segundos').innerText = Math.floor((distance % (minute)) / second);
+
+    }, second)
+
+  </script>
+</body>
+
+
+</html>
